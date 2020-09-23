@@ -5,5 +5,5 @@ You can now consume the action by referencing the main branch
 ```yaml
 uses: ivorpad/remove-rf@main
 with:
-  path: "some/path
+  path: "some/path"
 ```
