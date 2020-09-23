@@ -7,9 +7,7 @@ require('./sourcemap-register.js');module.exports =
 
 const core = __webpack_require__(186);
 const io = __webpack_require__(436);
-const wait = __webpack_require__(258);
 
-// most @actions toolkit packages have async methods
 async function run() {
   try {
     const path = core.getInput('path', { required: true });
@@ -19,7 +17,6 @@ async function run() {
     core.setFailed(error.message);
   }
 }
-
 run();
  
 
@@ -849,23 +846,6 @@ function copyFile(srcFile, destFile, force) {
     });
 }
 //# sourceMappingURL=io.js.map
-
-/***/ }),
-
-/***/ 258:
-/***/ ((module) => {
-
-let wait = function (milliseconds) {
-  return new Promise((resolve) => {
-    if (typeof milliseconds !== 'number') {
-      throw new Error('milliseconds not a number');
-    }
-    setTimeout(() => resolve("done!"), milliseconds)
-  });
-};
-
-module.exports = wait;
-
 
 /***/ }),
 
