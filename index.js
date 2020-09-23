@@ -1,8 +1,6 @@
 const core = require('@actions/core');
 const io = require("@actions/io");
-const wait = require('./wait');
 
-// most @actions toolkit packages have async methods
 async function run() {
   try {
     const path = core.getInput('path', { required: true });
@@ -12,6 +10,5 @@ async function run() {
     core.setFailed(error.message);
   }
 }
-
 run();
  
